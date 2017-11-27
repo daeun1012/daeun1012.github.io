@@ -4,6 +4,8 @@ title:  "[Jekyll] 구글 Analytics 추가"
 categories: [jekyll, google_analytics]
 excerpt: "Jekyll 테마를 적용하고 `_config.yml`을 살펴보니 google analytics 가 땋!!!"
 comments: true
+image:
+  feature: google-analytics/screen5.png
 ---
 
 ### Jekyll 테마를 적용하고 `_config.yml`을 살펴보니 google analytics 가 땋!!!
