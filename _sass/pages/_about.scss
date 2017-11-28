@@ -1,0 +1,180 @@
+@import url(https://fonts.googleapis.com/css?family=Condiment|Lato:100,400);
+//@import url(https://markmurray.co/codepen/entypostyle.css);
+
+@function makelongshadow($color) {
+  $val: 0px 0px $color;
+  @for $i from 1 through 200 {
+    $val: #{$val}, #{$i}px #{$i}px #{$color};
+  }
+  @return $val;
+}
+
+@mixin longshadow($color) {
+  text-shadow: makelongshadow($color);
+}
+
+@mixin center(){
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+$bgcolor:      #3f474f;
+$cardcolor:    darken($bgcolor, 10%);
+$cardcolor2:   lighten($bgcolor, 10%);
+$shadow:       darken($bgcolor, 11.75%);
+$green:        #10d7af;
+
+.about {
+  *, *:after, *:before {margin:0;padding:0;list-style-type:none;}
+  // html, body           {height:100%;width:100%;background: $bgcolor;font-size: 100%;}
+  a,
+  a:visited,
+  a:focus {
+    text-decoration: inherit;
+  	font-weight: inherit;
+  	color: inherit;
+
+    &:hover {
+       text-decoration: underline;
+    }
+  }
+  h2, h3 {font-weight:700; color: white;}
+  h2 {font-size: 2rem;text-align: center;margin-bottom: 5px;}
+  h3 {font-size: 0.9rem;text-align:center;}
+
+  ul {margin-top: 30px;}
+
+  li {
+     font-size: 0.8rem;
+     margin: 15px 0 0 35px;
+
+     a {
+       font-weight: 400;
+    }
+
+    span {
+       margin-right: 10px;
+       color: $green;
+       font-weight: 800;
+       font-size: 0.7em;
+    }
+  }
+
+  @include center;
+  margin-top: 300px;
+  width: 450px;
+  height: 281px;
+  z-index: 1;
+  perspective: 1000px;
+
+  .card {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 600ms linear;
+
+    .face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        background: $cardcolor;
+    }
+
+    .front {
+      overflow: hidden;
+      z-index: 2;
+
+      h1 {
+         font: 4em 'Condiment', cursive;
+         color: lighten($cardcolor, 15%);
+         @include longshadow($shadow);
+         position: relative;
+         text-align: center;
+         @include center;
+      }
+    }
+
+    .back {
+        display: block;
+        transform: rotateX(180deg);
+        box-sizing: border-box;
+        padding: 30px;
+        color: darken(#eaeaea, 5%);
+        background: $cardcolor;
+        z-index: 1;
+        font-family: 'Lato', sans-serif;
+
+        .icon-share {
+           position: absolute;
+           right:30px;bottom:30px;
+      }
+    }
+  }
+
+  &:hover .card {
+     transform: rotateX(180deg);
+  }
+
+  button {
+      text-transform: uppercase;
+      color: rgba(white, 0.9);
+      font: 0.8em 'Lato', sans-serif;
+      background: rgba($green, 0.95);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      box-shadow: 0 4px 0 0 darken($green, 15%);
+      cursor: pointer;
+      position: fixed;
+      z-index: 10;
+      top: 15px;
+      right: 20px;
+
+    &:hover {
+       color: rgba(white, 1);
+       background: rgba($green, 1);
+       top: 17px;
+    }
+  }
+
+  /* Wobble Vertical */
+  @keyframes wobble-vertical {
+  	16.65% {
+  		transform: translateY(8px);
+  	}
+
+  	33.3% {
+  		transform: translateY(-4px);
+  	}
+
+  	49.95% {
+  		transform: translateY(3px);
+  	}
+
+  	66.6% {
+  		transform: translateY(-1px);
+  	}
+
+  	83.25% {
+  		transform: translateY(1px);
+  	}
+
+  	100% {
+  		transform: translateY(0);
+  	}
+  }
+
+  .wobble-vertical {
+  	display: inline-block;
+
+  	&:hover {
+  		animation-name: wobble-vertical;
+  		animation-duration: 1s;
+  		animation-timing-function: ease-in-out;
+  		animation-iteration-count: 1;
+  	}
+  }
+}
