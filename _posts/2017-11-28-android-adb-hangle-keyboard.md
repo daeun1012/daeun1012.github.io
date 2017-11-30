@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Android] 에뮬레이터 한글 키보드 사용 방법"
-categories: [android, 한글키보드, adb, hangle-keyboard]
+categories: [android, emulator]
 excerpt: "구글 플레이스토어가 에뮬레이터에서도 된다!!!!!!!!!!!!!! 이거다!!!!!!!!!"
 comments: true
 image:
