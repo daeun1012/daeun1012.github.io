@@ -40,20 +40,54 @@ Truffle은 ehtereum CLI 툴이다.
   </code>
 </pre>
 
-설치가 완료되었으면 임의 위치에 폴더를 생성한뒤 초기화를 해보자.
+<h1>설치가 완료되었으면 임의 위치에 폴더를 생성한뒤 샘플을 따라해보자.</h1>
+문서상으론 truffle init webpack 이라는데 안된다. unbox 해야한다.
+
 [!CREATING AN ETHEREUM-ENABLED COMMAND LINE TOOL WITH TRUFFLE 3.0](http://truffleframework.com/tutorials/creating-a-cli-with-truffle-3)
 
 <pre>
   <code>
-    truffle init webpack
+    truffle unbox webpack
   </code>
 </pre>
 
-아래는 초기 생성 파일들 이다.
-- contracts/ : Solidity contracts 폴더
-- migrations/ : 실행가능한 개발 파일 폴더
-- test/ : 어플리케이션과 컨트랙트 테스트 파일 폴더
-- truffle.js : Truffle Configuration 파일
+완료후 build 해보자.
+<pre>
+  <code>
+    truffle build
+  </code>
+</pre>
+
+에러난다. 에러나란다.....ㅎㅎㅎ
+자 이제 실행해보자!!!
+.sol 파일들 컴파일 해주고
+
+<pre>
+  <code>
+    truffle compile
+  </code>
+</pre>
+
+testRPC 켜놓으세요, 그리고 포트도 확인하시구요.
+
+<pre>
+  <code>
+    truffle migrate
+  </code>
+</pre>
+
+자알된다아.
+블럭을 5개나 만드넹.
+
+다음으로 웹으로 실행해보기 위한 단계이다.
+webpack build 해보자
+
+<pre>
+  <code>
+    npm run build
+  </code>
+</pre>
+
 
 ![start-truffle1]({{ site.url }}/img/start-truffle/screen1.png)
 
