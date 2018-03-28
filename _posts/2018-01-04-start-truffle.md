@@ -3,7 +3,7 @@ layout: post
 title:  "[Ethereum] 이더리움 뭐라도 해보자!!"
 categories: [ethereum, testRPC, truffle]
 excerpt: "이더리움 TestRPC, Truffle 설치"
-comments: trues
+comments: true
 ---
 요즘 이래저래 너무 의욕상실이었다...
 다시 시작해야지...!

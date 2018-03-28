@@ -3,7 +3,7 @@ layout: post
 title:  "[Android] Android Studio 3.0 ProductFlavor Error"
 categories: [android, android-studio]
 excerpt: "안드로이드 스튜디오 3.0 에러 핸들링"
-comments: trues
+comments: true
 ---
 
 안드로이드 스튜디오가 3.0으로 업데이트 되었다.
