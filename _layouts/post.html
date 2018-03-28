@@ -2,11 +2,6 @@
 layout: default
 ---
 <link href="{{ site.url }}/css/highlight-style.css" rel="stylesheet" >
-<script src="https://utteranc.es/client.js"
-        repo="daeun1012/blog-comments"
-        issue-term="url"
-        async>
-</script>
 <a class="btn" href= "{{ site.url }}/" >
   Home
 </a>
@@ -68,5 +63,5 @@ layout: default
 
 {% if site.owner.disqus-shortname and page.comments == true %}
 <div id="disqus_thread"></div>
-{% include disqus.html %}
+{% include github_comment.html %}
 {% endif %}
