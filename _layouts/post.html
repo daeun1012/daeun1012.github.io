@@ -40,6 +40,11 @@ layout: default
   </article>
 </div>
 
+{% if site.owner.disqus-shortname and page.comments == true %}
+<!--<div id="disqus_thread"></div>-->
+{% include github_comment.html %}
+{% endif %}
+
 <div class="share-buttons">
   <h6>Share on: </h6>
   <ul>
@@ -60,5 +65,3 @@ layout: default
     </li>
   </ul>
 </div><!-- end share-buttons -->
-
-{% include github_comment.html %}
