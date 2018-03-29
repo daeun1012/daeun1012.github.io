@@ -1,67 +1,59 @@
-#
-###################################
-# Site wide configuration
-####################################
-#
-title: 2da
-email: daeun9294@gmail.com
-description: 이다 블로그
-url: https://daeun1012.github.io # the base hostname & protocol for your site
-keywords: ["Programming", "Android", "Swift", "Kotlin", "안드로이드"]
+# Site Info
+title: Iris
+tagline: '끄적끄적, 이다'
+description: '그냥 내 이야기'
+baseurl: ""
+url: http://daeun1012.github.io
+logo: '/public/logo.png'
 
-#
-###################################
-# Jekyll configuration
-####################################
-#
-timezone:          Korea/Asia
-markdown:          kramdown
-highlighter:       rouge
-excerpt_separator: <!--more-->
-permalink:         /articles/:year-:month/:title
-
+# Site configurations
+plugins:
+  - jekyll-paginate
+markdown: kramdown
 kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  enable_coderay: false
+  input: GFM
+excerpt_separator: "<!-- more -->"
+sass:
+  style: compressed
+  sass_dir: _scss
+paginate: 5
+paginate_path: '/blog/page:num'
+permalink: pretty
 
-#
-###################################
-# Site Owner configuration
-####################################
-#
-owner:
-  name: Ida
-  avatar: main_profile.jpg
-  job: "Mobile Developer"
-  bio: "Nothing great in the world has been accomplished without <strong>passion.</strong>"
-  email: daeun9294@gmail.com
-  disqus-shortname: #renyuanzblog
-  twitter: #renyuan814 #username
-  facebook: 100001772488008
-  google:
-    plus: #username
-    analytics: UA-110187793-1
-    verify:
-    ad-client:
-    ad-slot:
-  bing-verify:
-  github: daeun1012 #username
-  stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
-  linkedin: #renyuan-zou-69b7038a #username
-  xing: #username
-  instagram: 2da_a
-  lastfm: #username
-  tumblr: #username
-  pinterest: #username
-  foursquare: #username
-  steam: #username
-  dribbble: #username
-  youtube: #username
-  soundcloud: #username
-  weibo: #username
-  flickr: #username
-  codepen: #username
-  telegram: daeunlee
+version: 1.0.0
+
+# About/contact
+author:
+  name: Iris
+  description: Nothing great in the world has been accomplished without <strong>passion.</strong>
+  gravatar: 1CDF7E22A46A234E266BB34E5F30D658 # md5 hash of your email address
+  contact:
+    # linkedin:  https://www.linkedin.com/in/lizhihao
+    github:    https://github.com/daeun1012
+    # facebook:  <hide>
+    # twitter:   https://twitter.com/Li_Zhihao
+    # weibo:     http://weibo.com/41173780
+    email:     daeun9294@gmail.com
+
+# Navigation (2nd level links supported)
+nav:
+  Home:
+    - '/blog/'
+    - { Category: '/blog/categories/' }
+    - { Tags: '/blog/tags/' }
+  About:
+    - '/about/'
+
+# Where are tags and categories displayed
+tag_page: '/blog/tags/'
+category_page: '/blog/categories/'
+
+hero:
+  image: /public/img/we_will_be_giants_by_yalestewart.jpg
+  caption: Original Artwork &copy; <a href="http://yalestewart.deviantart.com/art/We-Will-Be-Giants-370176475">Yale Stewart</a>
+
+# Puglins
+mathjax: true # whether support mathjax
+google_analytics_token: 'UA-110187793-1' # leave blank if you don't want google analytics
+disqus_short_name: '' # leave blank if you don't want disqus
+

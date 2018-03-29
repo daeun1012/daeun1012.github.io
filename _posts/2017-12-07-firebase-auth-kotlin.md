@@ -1,11 +1,7 @@
 ---
 layout: post
-title:  "[Android] Firebase Auth Kotlin 으로 적용"
-categories: [android, firebase, kotlin]
-excerpt: "Firebase Auth Kotlin 적용"
-comments: true
-image:
-  feature: firebase-auth-kotlin/screen1.png
+title:  Firebase Auth Kotlin 으로 적용
+categories: [Android]
 ---
 
 ## Firebase Auth With Kotlin
@@ -19,19 +15,19 @@ image:
 
 #### 안드로이드 스튜디오 적용방법
 ##### 1. menu -> tools -> Firebase 클릭<br>
-![firebase-auth1]({{ site.url }}/img/firebase-auth-kotlin/screen1.png)
+![firebase-auth1]({{ site.url }}/public/img/firebase-auth-kotlin/screen1.png)
 
 ##### 2. Authentication 확장 후 Email and password authentication 클릭<br>
-![firebase-auth2]({{ site.url }}/img/firebase-auth-kotlin/screen2.png)
+![firebase-auth2]({{ site.url }}/public/img/firebase-auth-kotlin/screen2.png)
 
 ##### 3. 이제 Firebase 계정과 연결해주자! Connect to Firebase 클릭!!!!<br>
-![firebase-auth3]({{ site.url }}/img/firebase-auth-kotlin/screen3.png)
+![firebase-auth3]({{ site.url }}/public/img/firebase-auth-kotlin/screen3.png)
 
 ##### 4. 프로젝트 정보 기입 후 적용하면 !!!! Firebase 프로젝트 생성 완료!!!! (빠름빠름빠름~)<br>
-![firebase-auth4]({{ site.url }}/img/firebase-auth-kotlin/screen4.png)
+![firebase-auth4]({{ site.url }}/public/img/firebase-auth-kotlin/screen4.png)
 
 ##### 5. 이제 소스상에서 Firebase 를 추가해주자. Accept Changes 클릭하면 자동 Build ~~ <br>
-<img src="{{ site.url }}/img/firebase-auth-kotlin/screen5.png" width="50%">
+<img src="{{ site.url }}/public/img/firebase-auth-kotlin/screen5.png" width="50%">
 <br><br>
 <p>직접 문서보면서 추가하는 것보다는 훨씬 손쉽고 편하다.<br>
 문서보면서 최초 작성해보고 그 이후에는 스튜디오로 적용하는게 좋을거같다.

@@ -1,11 +1,7 @@
 ---
 layout: post
-title:  "[Android] Databinding Library"
-categories: [android, MVVM]
-excerpt: "간단히 Databinding을 소개하기위해 BasicSample을 참고하여 정리해보자."
-comments: true
-image:
-  feature: android-databinding/screen0.png
+title:  Android Databinding Library
+categories: [Android]
 ---
 
 ## Databinding Library

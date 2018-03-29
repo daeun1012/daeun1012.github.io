@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "iTunes store 수출 규정 준수"
-categories: [ios, itunes]
+title:  iTunes store 수출 규정 준수
+categories: [iOS]
 excerpt: "iOS 배포시 수출 규정 준수 에러(?) 처리 방법"
 comments: true
 ---

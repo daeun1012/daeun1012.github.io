@@ -1,11 +1,7 @@
 ---
 layout: post
-title:  "[Android] Android Architecture Component"
-categories: [android, architecture]
-excerpt: "ViewModel, LiveData, LifecycleOwner/LifecycleRegistryOwner 컴포넌트 역할과 예제 코드"
-comments: true
-image:
-  feature: android-architecture-component/screen0.png
+title:  Android Architecture Component
+categories: [Android]
 ---
 
 ## [Android Architecture Component](https://developer.android.com/topic/libraries/architecture/index.html)
@@ -30,7 +26,7 @@ Android Architecture Component library 는 1.0 stable 버전이라 개인 프로
 메모리 누수의 원인이 될 수 있기 때문이다.
 
 아래 그림이 ViewModel 의 LifeScope 를 좀 더 명확히 설명해 주고 있다.
- ![aac1]({{ site.url }}/img/android-architecture-component/screen1.png)
+ ![aac1]({{ site.url }}/public/img/android-architecture-component/screen1.png)
 
 ### 2. LiveData
  - Observable 데이터 홀더 이다.
