@@ -1,9 +1,10 @@
 <html>
 <body>
-<div id="wrap" style="display:none;border:1px solid;width:500px;height:300px;margin:5px 0;position:relative"></div>
-<!--<script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>-->
-    <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>
 <script>
+sample6_execDaumPostcode();
+
+function sample6_execDaumPostcode() {
         new daum.Postcode({
             oncomplete: function(data) {
                 // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
@@ -38,6 +39,7 @@
                 window.Android.setAddress(data.zonecode, fullAddr);
             }
         }).open();
+    }
 
 </script>
 </body>
