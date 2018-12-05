@@ -14,6 +14,8 @@ onPause -> onStop -> onDestroy
 
 순으로 볼수있다.
 
+<img src="{{ site.url }}/public/img/1204-android-lifecycle/image.png">
+
 onStart 와 onResume 의 차이점은
 onResume 일 때만, 유저와 상호작용이 가능하고
 onStart  일 때는, 화면은 노출되나 상호작용이 불가능하다.
