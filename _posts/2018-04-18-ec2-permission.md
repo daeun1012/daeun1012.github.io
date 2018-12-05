@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [AWS] public key로 ssh 로그인이 안될때
+title: public key로 ssh 로그인이 안될때
 categories: AWS
 ---
 
