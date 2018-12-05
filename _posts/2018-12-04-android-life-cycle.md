@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 안드로이드 LifeCycle(onResume/onStart 다른점)
+title: onResume, onStart 다른점
 categories: Android
 ---
 
