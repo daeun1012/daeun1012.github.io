@@ -40,7 +40,7 @@ ConstraintLayout 의 가장 큰 강점은 뷰를 flat 하게 구성할수 있다
 app:constraint_referenced_ids 을 사용해 뷰를 그룹화 하자.
 
 <pre>
-  <code>
+  <code class="xml">
     <android.support.constraint.Group
         android:id="@+id/winnerplayer_group"
         android:layout_width="wrap_content"
