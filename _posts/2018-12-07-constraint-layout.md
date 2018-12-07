@@ -41,24 +41,24 @@ app:constraint_referenced_ids 을 사용해 뷰를 그룹화 하자.
 
 <pre>
   <code class="xml">
-    <android.support.constraint.Group
+    &lt;android.support.constraint.Group
         android:id="@+id/winnerplayer_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="winnerPlayerLabel,winnerPlayer" />
+        app:constraint_referenced_ids="winnerPlayerLabel,winnerPlayer" /&gt;
 
-    <TextView
+    &lt;TextView
         android:id="@+id/winnerPlayerLabel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/result_winner"
-        android:textSize="44sp" />
+        android:textSize="44sp" /&gt;
 
-    <TextView
+    &lt;TextView
         android:id="@+id/winnerPlayer"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="O"
-        android:textSize="44sp" />
+        android:textSize="44sp" /&gt;
   </code>
 </pre>
