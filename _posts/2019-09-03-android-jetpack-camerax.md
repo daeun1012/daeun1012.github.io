@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Constraint layout 의 다른점
+title: Android CameraX
 categories: Android
 ---
 
@@ -95,6 +95,7 @@ created: Sep 03, 2019
 
 
 
-## Codelab
+## 참조
 
 [Getting Started with CameraX](https://codelabs.developers.google.com/codelabs/camerax-getting-started/#0)
+[찰스의 안드로이드-Android CameraX 라이브러리 미리보기](https://www.charlezz.com/?p=1237)
