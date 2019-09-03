@@ -6,9 +6,6 @@ categories: Android
 
 # Android Jetpack CameraX
 
-Tags: Android
-created: Sep 03, 2019
-
 ## 특징
 
 - Camera2를 사용
