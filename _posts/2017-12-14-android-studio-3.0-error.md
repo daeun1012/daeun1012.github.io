@@ -15,12 +15,10 @@ comments: true
 
 매우 간단한다.
 
-<pre>
-  <code>
+```
       android {
           ...
           flavorDimensions "default"
           ...
       }
-  </code>
-</pre>
+```

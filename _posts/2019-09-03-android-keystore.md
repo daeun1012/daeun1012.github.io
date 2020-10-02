@@ -22,18 +22,18 @@ Android Keystore 키의 키 자료 추출을 차단하기 위해 두 가지 보�
 즉, (Android KeyStore)를 쓰더라도 Android M 이전의 기기에서는 우리 앱의 데이터가 100% 안전하다는 장담을 할 수는 없습니다.
 
 KeyInfo API 로 키가 하드웨어로 안전하게 보호되고 있는지를 확인하는 방법
-
-    val privKey = (keyEntry as KeyStore.PrivateKeyEntry).privateKey
-    val factory = KeyFactory.getInstance(privKey.getAlgorithm(), "AndroidKeyStore")
-    val keyInfo: KeyInfo
-    try {
-        keyInfo = factory.getKeySpec(privKey, KeyInfo::class.java)
-        println("HARDWARE-BACKED KEY???? " + keyInfo.isInsideSecureHardware)
-    } catch (e: InvalidKeySpecException) {
-        // Not an Android KeyStore key.
-        e.printStackTrace()
-    }
-
+```kotlin
+val privKey = (keyEntry as KeyStore.PrivateKeyEntry).privateKey
+val factory = KeyFactory.getInstance(privKey.getAlgorithm(), "AndroidKeyStore")
+val keyInfo: KeyInfo
+try {
+    keyInfo = factory.getKeySpec(privKey, KeyInfo::class.java)
+    println("HARDWARE-BACKED KEY???? " + keyInfo.isInsideSecureHardware)
+} catch (e: InvalidKeySpecException) {
+    // Not an Android KeyStore key.
+    e.printStackTrace()
+}
+```
 ## **지원되는 알고리즘**
 
 - `[Cipher](https://developer.android.com/training/articles/keystore?hl=ko#SupportedCiphers)`
@@ -47,65 +47,66 @@ KeyInfo API 로 키가 하드웨어로 안전하게 보호되고 있는지를 �
 ---
 
 ## 새 비공개 키 생성
-
-    		/*
-         * Generate a new EC key pair entry in the Android Keystore by
-         * using the KeyPairGenerator API. The private key can only be
-         * used for signing or verification and only with SHA-256 or
-         * SHA-512 as the message digest.
-         */
-        val kpg: KeyPairGenerator = KeyPairGenerator.getInstance(
-                KeyProperties.KEY_ALGORITHM_EC,
-                "AndroidKeyStore"
-        )
+```kotlin
+    	/*
+ * Generate a new EC key pair entry in the Android Keystore by
+ * using the KeyPairGenerator API. The private key can only be
+ * used for signing or verification and only with SHA-256 or
+ * SHA-512 as the message digest.
+ */
+val kpg: KeyPairGenerator = KeyPairGenerator.getInstance(
+        KeyProperties.KEY_ALGORITHM_EC,
+        "AndroidKeyStore"
+)
         val parameterSpec: KeyGenParameterSpec = KeyGenParameterSpec.Builder(
-                alias,
-                KeyProperties.PURPOSE_SIGN or KeyProperties.PURPOSE_VERIFY
-        ).run {
-            setDigests(KeyProperties.DIGEST_SHA256, KeyProperties.DIGEST_SHA512)
-            build()
-        }
+        alias,
+        KeyProperties.PURPOSE_SIGN or KeyProperties.PURPOSE_VERIFY
+).run {
+    setDigests(KeyProperties.DIGEST_SHA256, KeyProperties.DIGEST_SHA512)
+    build()
+}
 
-        kpg.initialize(parameterSpec)
+kpg.initialize(parameterSpec)
 
-        val kp = kpg.generateKeyPair()
-
+val kp = kpg.generateKeyPair()
+```
 ## 데이터 서명 및 확인
+```kotlin
+    	/*
+ * Use a PrivateKey in the KeyStore to create a signature over
+ * some data.
+ */
+val ks: KeyStore = KeyStore.getInstance("AndroidKeyStore").apply {
+    load(null)
+}
+val entry: KeyStore.Entry = ks.getEntry(alias, null)
+if (entry !is KeyStore.PrivateKeyEntry) {
+    Log.w(TAG, "Not an instance of a PrivateKeyEntry")
+    return null
+}
+val signature: ByteArray = Signature.getInstance("SHA256withECDSA").run {
+    initSign(entry.privateKey)
+    update(data)
+    sign()
+}
 
-    		/*
-         * Use a PrivateKey in the KeyStore to create a signature over
-         * some data.
-         */
-        val ks: KeyStore = KeyStore.getInstance("AndroidKeyStore").apply {
-            load(null)
-        }
-        val entry: KeyStore.Entry = ks.getEntry(alias, null)
-        if (entry !is KeyStore.PrivateKeyEntry) {
-            Log.w(TAG, "Not an instance of a PrivateKeyEntry")
-            return null
-        }
-        val signature: ByteArray = Signature.getInstance("SHA256withECDSA").run {
-            initSign(entry.privateKey)
-            update(data)
-            sign()
-        }
-
-    		/*
-         * Verify a signature previously made by a PrivateKey in our
-         * KeyStore. This uses the X.509 certificate attached to our
-         * private key in the KeyStore to validate a previously
-         * generated signature.
-         */
-        val ks = KeyStore.getInstance("AndroidKeyStore").apply {
-            load(null)
-        }
-        val entry = ks.getEntry(alias, null) as? KeyStore.PrivateKeyEntry
-        if (entry == null) {
-            Log.w(TAG, "Not an instance of a PrivateKeyEntry")
-            return false
-        }
-        val valid: Boolean = Signature.getInstance("SHA256withECDSA").run {
-            initVerify(entry.certificate)
-            update(data)
-            verify(signature)
-        }
+/*
+ * Verify a signature previously made by a PrivateKey in our
+ * KeyStore. This uses the X.509 certificate attached to our
+ * private key in the KeyStore to validate a previously
+ * generated signature.
+ */
+val ks = KeyStore.getInstance("AndroidKeyStore").apply {
+    load(null)
+}
+val entry = ks.getEntry(alias, null) as? KeyStore.PrivateKeyEntry
+if (entry == null) {
+    Log.w(TAG, "Not an instance of a PrivateKeyEntry")
+    return false
+}
+val valid: Boolean = Signature.getInstance("SHA256withECDSA").run {
+    initVerify(entry.certificate)
+    update(data)
+    verify(signature)
+}
+```

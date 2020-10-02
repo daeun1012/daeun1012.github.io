@@ -36,13 +36,14 @@ comments: true
 ---
 
 ## 그래들 의존성 추가
-
+```
     def camerax_version = "1.0.0-alpha01"
     implementation "androidx.camera:camera-core:${camerax_version}"
     implementation "androidx.camera:camera-camera2:${camerax_version}"
+```
 
 ## 화면 미리보기
-
+```kotlin
     val previewConfig = PreviewConfig.Builder().build()
     val preview = Preview(previewConfig)
     preview.setOnPreviewOutputUpdateListener {
@@ -52,9 +53,9 @@ comments: true
     }
     // attach preview to lifecycle
     CameraX.bindToLifecycle(this as LifecycleOwner, preview)
-
+```
 ## 이미지 분석
-
+```kotlin
     // configure image analysis
     // set resolution
     val imageAnalysisConfig = ImageAnalysisConfig.Builder()
@@ -67,18 +68,18 @@ comments: true
     // insert your code here
     })
     CameraX.bindToLifecycle(this as LifecycleOwner, imageAnalysis, preview)
-
+```
 ## 이미지 촬영
-
+```kotlin
     // configure image capture
     val imageCaptureConfig = ImageCaptureConfig.Builder()
     .setTargetRotation(windowManager.defaultDisplay.rotation)
     .build()
     val imageCapture = ImageCapture(imageCaptureConfig)
     CameraX.bindToLifecycle(this as LifecycleOwner, imageCapture, imageAnalysis, preview)
-
+```
 ## 이미지 저장
-
+```kotlin
     val file = File(...)
     imageCapture.takePicture(file,
     object : ImageCapture.OnImageSavedListener {
@@ -90,7 +91,7 @@ comments: true
     // insert your code here
     }
     })
-
+```
 
 
 ## 참조

@@ -24,16 +24,14 @@ RxJava 와 Kotlin, Dagger2, Espresso ... AAC... 다 내가 찾던거다.
 ### 빌드 환경
 build.gradle 파일에 몇줄만 추가 하면 된다.
 
-<pre>
-<code>
+```
 android {
     ....
     dataBinding {
         enabled = true
     }
 }
-</code>
-</pre>
+```
 
 ### 데이터 바인딩
 기본적으로, Binding 클래스는 레이아웃 파일의 이름을 기준으로 생성되어 파일 이름을 파스칼 표기법(Pascal Case: 합성어의 첫 글자를 대문자로 표기)으로 변환하고 그 뒤에 "Binding"을 접미사로 붙인다.

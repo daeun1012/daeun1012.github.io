@@ -25,8 +25,8 @@ Gradle이 수행되면 buildSrc 디렉토리가 존재하는지 체크한다. �
 
 1. 루트폴더에 buildSrc 폴더를 만든다.
 2. buildSrc 폴더 안에  build.gradle.kts 파일을 생성한다.
-3. 아래와 같이 작성한다.
-
+3. 아래와 같이 작성한다.<br/>
+```
     plugins {
         `kotlin-dsl`
     }
@@ -34,24 +34,25 @@ Gradle이 수행되면 buildSrc 디렉토리가 존재하는지 체크한다. �
     repositories {
         jcenter()
     }
+```
 
 4. buildSrc의 하위 폴더로 src > main > java 폴더를 생성한다.
 
 5. java 폴더 안에 Dependencies.kt 파일을 생성한다. (파일명은 자유롭게)
 
 6. 아래와 같이 작성한다. (예시)
-
+```
     object Versions {
         val kotlin = "1.2.71"
     }
     object Dependencies {
         val kotlinStandardLibrary = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
     }
-
+```
 7. 아래와 같이 사용한다!!!!!!! (편하드아)
-
+```
     implementation Dependencies.kotlinStandardLibrary
-
+```
 ---
 
 참고 사이트
