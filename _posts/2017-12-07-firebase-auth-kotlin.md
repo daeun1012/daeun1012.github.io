@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  Firebase Auth Kotlin 으로 적용
-categories: [Android]
+tags: [Android]
+comments: true
 ---
 
 ## Firebase Auth With Kotlin

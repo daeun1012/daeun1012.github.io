@@ -1,59 +1,41 @@
-# Site Info
-title: Iris
-tagline: '끄적끄적, 이다'
-description: '그냥 내 이야기'
-baseurl: ""
-url: http://daeun1012.github.io
-logo: '/public/logo.png'
+# Site settings
+title:          Tati's
+description:    "Minimal Jekyll theme for storytellers"
+baseurl:        ""
+url:            "https://daeun1012.github.io/tale"
 
-# Site configurations
-plugins:
-  - jekyll-paginate
-markdown: kramdown
-kramdown:
-  input: GFM
-excerpt_separator: "<!-- more -->"
-sass:
-  style: compressed
-  sass_dir: _scss
-paginate: 5
-paginate_path: '/blog/page:num'
-permalink: pretty
+# Google Analytics
+google_analytics: UA-110187793-1
 
-version: 1.0.0
-
-# About/contact
+# Author
 author:
-  name: Iris
-  description: Nothing great in the world has been accomplished without <strong>passion.</strong>
-  gravatar: 1CDF7E22A46A234E266BB34E5F30D658 # md5 hash of your email address
-  contact:
-    # linkedin:  https://www.linkedin.com/in/lizhihao
-    github:    https://github.com/daeun1012
-    # facebook:  <hide>
-    # twitter:   https://twitter.com/Li_Zhihao
-    # weibo:     http://weibo.com/41173780
-    email:     daeun9294@gmail.com
+  name:         Tatiana
+  url:          https://daeun1012.github.io
+  email:        daeun9294@gmail.com
 
-# Navigation (2nd level links supported)
-nav:
-  Home:
-    - '/blog/'
-    - { Category: '/blog/categories/' }
-    - { Tags: '/blog/tags/' }
-  About:
-    - '/about/'
+# Build settings
+markdown:       kramdown
+include:
+  - _pages
 
-# Where are tags and categories displayed
-tag_page: '/blog/tags/'
-category_page: '/blog/categories/'
+# Assets
+sass:
+  sass_dir:     _sass
+  style:        compressed
 
-hero:
-  image: /public/img/we_will_be_giants_by_yalestewart.jpg
-  caption: Original Artwork &copy; <a href="http://yalestewart.deviantart.com/art/We-Will-Be-Giants-370176475">Yale Stewart</a>
+# Gems
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  # - jemoji #Uncomment this to allow emoji in your post
 
-# Puglins
-mathjax: true # whether support mathjax
-google_analytics_token: 'UA-110187793-1' # leave blank if you don't want google analytics
-disqus_short_name: '' # leave blank if you don't want disqus
+# Permalinks
+permalink:      /:year-:month-:day/:title
+paginate:       5
 
+# Excludes
+exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
+
+# Disqus (Set to your disqus id)
+disqus:         jekyll-tale

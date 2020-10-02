@@ -1,7 +1,8 @@
 ---
 layout: post
 title: 가장 긴 체인을 선택하는 이유
-categories: Blockchain
+tags: Blockchain
+comments: true
 ---
 
 블럭체인을 공부하며 이해가 안가는 부분이

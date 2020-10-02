@@ -1,7 +1,8 @@
 ---
 layout: post
 title: onResume, onStart 다른점
-categories: Android
+tags: Android
+comments: true
 ---
 
 안드로이드 LifeCycle 중,

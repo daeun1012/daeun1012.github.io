@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  Jekyll 구글 Analytics 추가
-categories: [jekyll]
+tags: [jekyll]
+comments: true
 ---
 
 ### Jekyll 테마를 적용하고 `_config.yml`을 살펴보니 google analytics 가 땋!!!

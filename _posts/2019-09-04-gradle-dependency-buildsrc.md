@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Gradle Dependency 관리하기 (buildSrc)
-categories: [Android]
+tags: Android
+comments: true
 ---
 
 ### Gradle Dependency Management Issue

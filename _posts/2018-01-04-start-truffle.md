@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  이더리움 뭐라도 해보자!!
-categories: Ethereum
+tags: Ethereum
+comments: true
 ---
 요즘 이래저래 너무 의욕상실이었다...
 다시 시작해야지...!

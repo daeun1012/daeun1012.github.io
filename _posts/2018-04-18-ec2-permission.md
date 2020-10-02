@@ -1,7 +1,8 @@
 ---
 layout: post
 title: public key로 ssh 로그인이 안될때
-categories: AWS
+tags: AWS
+comments: true
 ---
 
 .ssh/authorized_keys 파일에 public key를 추가하고

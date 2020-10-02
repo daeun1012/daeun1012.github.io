@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  Android Architecture Component
-categories: [Android]
+tags: [Android]
+comments: true
 ---
 
 ## [Android Architecture Component](https://developer.android.com/topic/libraries/architecture/index.html)

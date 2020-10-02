@@ -1,7 +1,8 @@
 ---
 layout: post
 title: 블록체인이 돈과 경제를 어떻게 변화시키고 있는가
-categories: Blockchain
+tags: Blockchain
+comments: true
 ---
 
 <div align="center">

@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  Android Databinding Library
-categories: [Android]
+tags: [Android]
+comments: true
 ---
 
 ## Databinding Library

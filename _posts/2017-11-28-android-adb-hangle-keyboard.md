@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  에뮬레이터 한글 키보드 사용 방법
-categories: [Android]
+tags: [Android]
+comments: true
 ---
 
 # 에뮬레이터 한글 키보드 사용법

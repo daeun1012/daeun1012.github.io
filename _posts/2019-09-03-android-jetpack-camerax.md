@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Android CameraX
-categories: Android
+tags: Android
+comments: true
 ---
 
 # Android Jetpack CameraX

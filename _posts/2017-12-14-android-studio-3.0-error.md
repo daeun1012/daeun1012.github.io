@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  Android Studio 3.0 ProductFlavor Error
-categories: Android
+tags: Android
+comments: true
 ---
 
 안드로이드 스튜디오가 3.0으로 업데이트 되었다.

@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Android keystore
-categories: Android
+tags: Android
+comments: true
 ---
 
 # **Android Keystore Service**

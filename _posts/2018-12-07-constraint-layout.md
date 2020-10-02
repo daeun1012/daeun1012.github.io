@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Constraint layout 의 다른점
-categories: Android
+tags: Android
+comments: true
 ---
 
 ## 안드로이드는 뷰를 어떻게 그리는가?
