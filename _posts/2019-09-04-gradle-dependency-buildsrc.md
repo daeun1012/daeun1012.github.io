@@ -3,6 +3,9 @@ layout: post
 title: Gradle Dependency 관리하기 (buildSrc)
 tags: Android
 comments: true
+post-header: true
+header-img: /public/img/android-device.jpg
+
 ---
 
 ### Gradle Dependency Management Issue

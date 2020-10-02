@@ -7,6 +7,10 @@
 
     {% include navigation.html %}
 
+    {% if page.post-header == true %}
+        {% include post-header.html %}
+    {% endif %}
+
     <main>
       {{ content }}
     </main>
